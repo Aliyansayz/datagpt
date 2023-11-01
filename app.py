@@ -75,6 +75,8 @@ if submit:
         relavant_docs=get_similar_docs(index,prompt,document_count)
         st.write(relavant_docs)
 
+        answer= get_answer_from_openai(query,  similar_docs, model_name="gpt-3.5-turbo" )
+        st.write(answer)
         #Displaying search results
         st.success("Please find the search results :")
          #Displaying search results
@@ -89,3 +91,6 @@ if submit:
 
     else:
         st.sidebar.error("Ooopssss!!! Please provide API keys.....")
+
+
+   
